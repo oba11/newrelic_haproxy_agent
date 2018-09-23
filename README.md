@@ -1,6 +1,23 @@
 ## New Relic Haproxy monitoring Plugin
 
-Repurposed from https://github.com/railsware/newrelic_platform_plugins/tree/master/newrelic_haproxy_agent
+Repurposed from https://github.com/railsware/newrelic_platform_plugins/tree/master/newrelic_haproxy_agent to work with Docker
+
+## Docker
+
+```
+docker run -d oba11/newrelic-haproxy-agent
+```
+
+## Supported environment variables
+
+`APP_NAME`: This is the newrelic application name, default is `my-haproxy`.<br/>
+`STATS_URL`: URI of the haproxy CSV stats url, default is `http://127.0.0.1:1000/;csv`.<br/>
+`PROXY_NAME`: The name of the proxy to monitor, check your haproxy stats page, default is `http_80`.<br/>
+`PROXY_TYPE`: The type of the proxy to monitor (ex: 'frontend' or 'backend'), default is `backend`.<br/>
+`AUTH_USER`: The username if the status page is protected under basic authentication.<br/>
+`AUTH_PASS`: The password if the status page is protected under basic authentication.<br/>
+
+---
 
 The New Relic Haproxy Plugin enables monitoring of HAProxy – a TCP/HTTP load balancer – and reports the following data for a specified proxy:
 
