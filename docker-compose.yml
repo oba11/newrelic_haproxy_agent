@@ -1,0 +1,5 @@
+app:
+  build: .
+  environment:
+    APP_NAME: my-haproxy
+    NEW_RELIC_LICENSE_KEY:
